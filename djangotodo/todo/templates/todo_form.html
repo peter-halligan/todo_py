@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="columns is-multiline">
+    <div class="column is-12">
+        <h1 class="title">New todo</h1>
+    </div>
+    
+    <hr>
+    <div class="column is-12">
+    <form method="post" autocomplete="off">
+        {% csrf_token %}
+
+        {{ form|crispy }}
+
+        <div class="row">
+            <div class="col-md-8">
+                <button class="btn btn-success btn-block btn-lg" type="submit"><i class="fa-regular fa-floppy-disk fa-xl"></i> Submit</button>
+            </div>
+            <div class="col-md-4 border-bottom">
+                <a class="btn btn-secondary btn-lg btn-block" href="{% url 'todos' %}">Back to todos</a>
+            </div>
+            
+        </div>
+      
+    </form>
+</div>
+{% endblock %}

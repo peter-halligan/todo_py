@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="columns is-multiline">
+    <div class="column is-12">
+        <h1 class="title">{{ todo.title }}</h1>
+    </div>
+    
+    <div class="column is-12">
+        <strong>is done: {{ todo.is_done }}</strong><br />
+        <strong>Description: {{ todo.description }}</strong>
+    </div>
+
+    {% if  not todo.is_done %}
+        <a href="{% url 'todo' todo.id %}?change_status=done" class="button is-success">Mark as done</a>
+    {% endif %}
+{% endblock %}

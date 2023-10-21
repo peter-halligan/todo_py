@@ -1,5 +1,5 @@
 setup:
-	python3 -m venv ~/.local_python_environment
+	python3 -m venv ~/.todo_py
 
 install:
 	pip install --upgrade pip &&\

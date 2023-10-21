@@ -1,3 +1,6 @@
 pytest
 pylint
 locust
+django
+django-cripsy-forms
+crispy-bootstrap5

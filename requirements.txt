@@ -2,5 +2,10 @@ pytest
 pylint
 locust
 django
-django-cripsy-forms
+django-crispy-forms
 crispy-bootstrap5
+requests
+authlib
+python-dotenv
+psycopg2-binary
+

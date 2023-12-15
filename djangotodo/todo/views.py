@@ -7,14 +7,15 @@ from django.contrib.auth.decorators import login_required
 from .forms import TodoForm
 from .models import TodoItem
 
+
 # list todos
 @login_required(login_url="/accounts/login/")
 def todos(request):
-
     context = {
-        'todos': TodoItem.objects.filter(owner=request.user),
+        "todos": TodoItem.objects.filter(owner=request.user),
     }
     return render(request, "todos.html", context)
+
 
 # todo form
 @login_required(login_url="/accounts/login/")
@@ -31,8 +32,8 @@ def todo_form(request, pk=None):
 
         if form.is_valid():
             form.save()
-            return redirect("todos")  
-    
+            return redirect("todos")
+
     else:
         if pk:
             todo = get_object_or_404(TodoItem, pk=pk)
@@ -41,29 +42,28 @@ def todo_form(request, pk=None):
         else:
             form = TodoForm()
 
-    context = {
-        'form': form  
-    }
+    context = {"form": form}
 
     return render(request, "todo_form.html", context)
+
 
 # details for a single todo
 @login_required(login_url="/accounts/login/")
 def todo(request, pk):
     todo = get_object_or_404(TodoItem, pk=pk)
-    context = { 'todo': todo }
+    context = {"todo": todo}
 
-    change_status = request.GET.get('change_status', None)
+    change_status = request.GET.get("change_status", None)
 
     if change_status:
         todo.is_done = True
         todo.save()
-    
+
     return render(request, "todo.html", context)
+
 
 @login_required(login_url="/accounts/login/")
 def delete(request, pk):
     todo = get_object_or_404(TodoItem, pk=pk)
     todo.delete()
     return redirect("todos")
-

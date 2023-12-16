@@ -8,4 +8,5 @@ requests
 authlib
 python-dotenv
 psycopg2-binary
+coverage
 

@@ -45,4 +45,9 @@ jobs:
         pip install -r requirements.txt
     - name: Run Tests
       run: |
-        python djangotodo/manage.py test todo
+        coverage djangotodo/manage.py test todo
+    
+    - name: Upload coverage reports to Codecov
+      uses: codecov/codecov-action@v3
+      env:
+        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

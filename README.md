@@ -1,5 +1,7 @@
 # Django based todo
 
+[![codecov](https://codecov.io/gh/peter-halligan/todo_py/graph/badge.svg?token=W232B3U63Z)](https://codecov.io/gh/peter-halligan/todo_py)
+
 simple django based todo application used for learning django framework.
 This repository will also be used for a 100 days of code project starting from the next commit as day 1.
 
@@ -33,4 +35,3 @@ This will evolve as the days pass my goal is to make a production ready applicat
 
 python manage.py runserver 127.0.0.1:5000
 
-[![codecov](https://codecov.io/gh/peter-halligan/todo_py/graph/badge.svg?token=W232B3U63Z)](https://codecov.io/gh/peter-halligan/todo_py)

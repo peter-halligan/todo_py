@@ -35,3 +35,4 @@ This will evolve as the days pass my goal is to make a production ready applicat
 
 python manage.py runserver 127.0.0.1:5000
 
+[100 days of code diary](100_days.md)

@@ -32,3 +32,5 @@ This will evolve as the days pass my goal is to make a production ready applicat
 ## run todo application
 
 python manage.py runserver 127.0.0.1:5000
+
+[![codecov](https://codecov.io/gh/peter-halligan/todo_py/graph/badge.svg?token=W232B3U63Z)](https://codecov.io/gh/peter-halligan/todo_py)
